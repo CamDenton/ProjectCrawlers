@@ -16,8 +16,8 @@ public class EnemyMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
-        agent = GetComponent<NavMeshAgent>();
-        controller = GetComponent<CharacterController>();
+        agent = GetComponentInParent<NavMeshAgent>();
+        
         
         
     }
@@ -25,7 +25,7 @@ public class EnemyMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        controller.SimpleMove(Physics.gravity);
+        
         playerPos = player.transform.position;
 		if (playerDetected == false)
         {

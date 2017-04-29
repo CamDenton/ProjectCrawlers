@@ -7,8 +7,9 @@ public class playerDeath : MonoBehaviour {
     
     
     Animator anim;
-    altPlayerController playerMovement;
+    PlayerMov playerMovement;
     playerInfo playerStats;
+    CharacterController controller;
    
     
      
@@ -17,8 +18,8 @@ public class playerDeath : MonoBehaviour {
     void Start () {
 
         anim = GetComponent<Animator>();
-        
-        playerMovement = GetComponent<altPlayerController>();
+        controller = GetComponent<CharacterController>();
+        playerMovement = GetComponent<PlayerMov>();
         if (GetComponent<KnightClass>())
         {
             playerStats = new KnightClass();
@@ -43,6 +44,8 @@ public class playerDeath : MonoBehaviour {
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
         {
             anim.Play("Hit");
+            controller.Move(controller.transform.forward * -5);
+
         }
 
 
@@ -56,6 +59,7 @@ public class playerDeath : MonoBehaviour {
         {
             playerMovement.enabled = false;
             anim.Play("Death");
+            Application.Quit();
             
 
 

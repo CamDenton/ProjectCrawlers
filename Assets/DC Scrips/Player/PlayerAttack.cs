@@ -4,42 +4,49 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class PlayerAttack : MonoBehaviour {
-    int AttackInt = 30;
+    public int AttackInt = 30;
     Animator anim;
-    bool attacking = false;
-    
-   
+    bool isAttacking = false;
 
 
 	// Use this for initialization
 	void Start () {
         anim = gameObject.GetComponentInParent<Animator>();
-        
-        
-        
+  
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        Debug.Log(isAttacking);
+        if (Input.GetButtonDown("Fire1") && !isAttacking)
+        {
+            StartCoroutine(Attack());
+        }
+        
 	}
 
+ IEnumerator Attack()
+    {
+        isAttacking = true;
+        yield return new WaitForSeconds(1);
+        isAttacking = false;
+
+    }
 
     void OnTriggerEnter(Collider coll)
     {
         
-        if (coll.gameObject.tag == "Enemy" /*&& Input.GetButton("Fire1")*/)
+        if (coll.gameObject.tag == "Enemy" && isAttacking)
         {
-            coll.gameObject.BroadcastMessage("Hit", AttackInt);
-            attacking = true;
-
+            coll.gameObject.BroadcastMessage("Hit", AttackInt, SendMessageOptions.DontRequireReceiver);
+            
         }
 
     }
 
-    void OnTriggerExit(Collider coll)
+    void ChangeAttack(int modifier)
     {
-        attacking = false;
+        AttackInt += modifier;
     }
 }
 

@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyCombat : MonoBehaviour {
-    int maxHealth = 60;
+    public int maxHealth = 60;
     public int currentHealth;
     public int enemyDamage = 10;
     CharacterController controller;
+    playerDeath playerHealth;
 
     // Use this for initialization
     void Start()
     {
         currentHealth = maxHealth;
         controller = GetComponent<CharacterController>();
-       
 
     }
 
@@ -25,25 +25,20 @@ public class EnemyCombat : MonoBehaviour {
 
     }
 
-    void OnControllerColliderHit(ControllerColliderHit hit)
+    void OnCollisionEnter(Collision hit)
     {
         
         if (hit.gameObject.tag == "Player")
         {
-            hit.gameObject.BroadcastMessage("Hit", enemyDamage);
+            hit.gameObject.SendMessageUpwards("Hit", enemyDamage, SendMessageOptions.DontRequireReceiver);
             Debug.Log("Hit");
+
+           
+            
         }
+
     }
 
-    public void Hit(int damage)
-    {
-        currentHealth = currentHealth - damage;
-
-        if (currentHealth <= 0)
-        {
-            gameObject.SetActive(false);
-        }
-    }
 
      
 }
