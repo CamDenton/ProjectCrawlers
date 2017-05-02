@@ -4,14 +4,14 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public Image[] itemImages = new Image[numItemSlots];    // The Image components that display the Items.
-    public Item[] items = new Item[numItemSlots];           // The Items that are carried by the player.
+    public ItemScrips[] items = new ItemScrips[numItemSlots];           // The Items that are carried by the player.
 
 
     public const int numItemSlots = 4;                      // The number of items that can be carried.  This is a constant so that the number of Images and Items are always the same.
 
 
     // This function is called by the PickedUpItemReaction in order to add an item to the inventory.
-    public void AddItem(Item itemToAdd)
+    public void AddItem(ItemScrips itemToAdd)
     {
         // Go through all the item slots...
         for (int i = 0; i < items.Length; i++)
@@ -30,7 +30,7 @@ public class Inventory : MonoBehaviour
 
 
     // This function is called by the LostItemReaction in order to remove an item from the inventory.
-    public void RemoveItem (Item itemToRemove)
+    public void RemoveItem (ItemScrips itemToRemove)
     {
         // Go through all the item slots...
         for (int i = 0; i < items.Length; i++)

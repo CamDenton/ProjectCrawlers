@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class playerDeath : MonoBehaviour {
     
@@ -10,6 +11,8 @@ public class playerDeath : MonoBehaviour {
     PlayerMov playerMovement;
     playerInfo playerStats;
     CharacterController controller;
+    public Slider healthBar;
+    public Image damagedImage;
    
     
      
@@ -32,7 +35,7 @@ public class playerDeath : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        healthBar.value = playerStats.CurrentHealth;
 	}
 
    
@@ -48,28 +51,26 @@ public class playerDeath : MonoBehaviour {
 
         }
 
-
-
-
-
         print("Hit");
         print(playerStats.CurrentHealth);
 
         if (playerStats.CurrentHealth <= 0)
         {
-            playerMovement.enabled = false;
-            anim.Play("Death");
-            Application.Quit();
-            
-
-
+            Death();
+  
         }
 
         else
         {
-            playerMovement.enabled = true;
+           
         }
 
+    }
 
+    void Death()
+    {
+        playerMovement.enabled = false;
+        anim.Play("Death");
+        Application.Quit();
     }
 }

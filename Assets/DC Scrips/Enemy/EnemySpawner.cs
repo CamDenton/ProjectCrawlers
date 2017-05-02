@@ -6,10 +6,13 @@ public class EnemySpawner : MonoBehaviour {
    public GameObject enemyObject;
     Vector3 parentPosition;
     public int maxSpawn = 0;
+    
 
 	// Use this for initialization
 	void Start () {
         parentPosition = gameObject.transform.position;
+        
+        
 	}
 	
 	// Update is called once per frame
@@ -28,7 +31,7 @@ public class EnemySpawner : MonoBehaviour {
 
     IEnumerator SpawnEnemy()
     {
-        for(int i = 0; i <= 3; i++)
+        for(int i = 0; i <= Random.Range(2, 4); i++)
         {
             if (maxSpawn <= i)
             {

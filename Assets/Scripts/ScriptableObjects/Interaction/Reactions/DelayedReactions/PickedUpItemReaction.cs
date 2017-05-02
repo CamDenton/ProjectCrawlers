@@ -1,6 +1,6 @@
 ﻿public class PickedUpItemReaction : DelayedReaction
 {
-    public Item item;               // The item asset to be added to the Inventory.
+    public ItemScrips item;               // The item asset to be added to the Inventory.
 
 
     private Inventory inventory;    // Reference to the Inventory component.

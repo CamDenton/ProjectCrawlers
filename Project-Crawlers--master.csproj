@@ -107,6 +107,9 @@
     <Compile Include="Assets\DC Scrips\Player\PointClickMovement.cs" />
     <Compile Include="Assets\DC Scrips\Player\SwordCollectible.cs" />
     <Compile Include="Assets\DC Scrips\Player\playerDeath.cs" />
+    <Compile Include="Assets\DC Scrips\World\Inventory\InventoryScript.cs" />
+    <Compile Include="Assets\DC Scrips\World\Inventory\ItemScript.cs" />
+    <Compile Include="Assets\DC Scrips\World\InventoryScriptEditor.cs" />
     <Compile Include="Assets\DC Scrips\World\Quit.cs" />
     <Compile Include="Assets\Metal Guy\Scripts\altPlayerController.cs" />
     <Compile Include="Assets\Metal Guy\Scripts\cameraControl.cs" />

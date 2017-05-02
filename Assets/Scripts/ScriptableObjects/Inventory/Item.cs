@@ -5,7 +5,7 @@
 // this script instead of just sprites to ensure that items
 // are extensible.
 [CreateAssetMenu]
-public class Item : ScriptableObject
+public class ItemScrips : ScriptableObject
 {
     public Sprite sprite;
 }
