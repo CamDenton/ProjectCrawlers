@@ -7,7 +7,7 @@ public class ItemScript : ScriptableObject {
 
     public Sprite spriteImage;
     public GameObject item;
-    
+    public string ItemType = string.Empty;
 	
 }
 

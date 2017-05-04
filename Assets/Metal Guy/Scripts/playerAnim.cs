@@ -7,9 +7,11 @@ public class playerAnim : MonoBehaviour {
     public string horizontal = "HorizontalP1";
     public string vertical = "VerticalP1";
     public string sprint = "SprintP1";
+    PlayerAttack attack;
     // Use this for initialization
     void Start () {
         anim = gameObject.GetComponent<Animator>();
+        attack = gameObject.GetComponentInChildren<PlayerAttack>();
     }
 	
 	// Update is called once per frame

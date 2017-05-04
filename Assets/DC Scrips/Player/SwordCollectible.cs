@@ -5,12 +5,13 @@ using UnityEngine;
 public class SwordCollectible : MonoBehaviour {
     public string weaponName = "Dull Longsword";
     public int attackModifier = 10;
-    public InventoryScript inventoryAdd;
+    public WeaponSlot weapon;
     public ItemScript item;
    
 	// Use this for initialization
 	void Start () {
-        inventoryAdd = new InventoryScript();
+        weapon = GameObject.Find("Weapon Slot").GetComponent<WeaponSlot>();
+        
         
 	}
 	
@@ -23,7 +24,7 @@ public class SwordCollectible : MonoBehaviour {
     {
         if(other.gameObject.tag == "Player" && other.gameObject.GetComponent<KnightClass>())
         {
-            inventoryAdd.Additem(item);
+            weapon.addWeapon(item);
             other.gameObject.BroadcastMessage("ChangeAttack", attackModifier);
 
             Destroy(gameObject);

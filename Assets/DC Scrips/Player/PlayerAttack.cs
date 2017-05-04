@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public class PlayerAttack : MonoBehaviour {
     public int AttackInt = 30;
     Animator anim;
-    bool isAttacking = false;
+   public bool isAttacking = false;
 
 
 	// Use this for initialization
