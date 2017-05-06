@@ -22,7 +22,7 @@ public class SwordCollectible : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player" && other.gameObject.GetComponent<KnightClass>())
+        if(other.gameObject.tag == "Player")
         {
             weapon.addWeapon(item);
             other.gameObject.BroadcastMessage("ChangeAttack", attackModifier);

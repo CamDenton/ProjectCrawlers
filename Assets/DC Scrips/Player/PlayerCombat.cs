@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class playerDeath : MonoBehaviour {
+public class PlayerCombat : MonoBehaviour {
     
     
     Animator anim;
     PlayerMov playerMovement;
-    playerInfo playerStats;
+    PlayerStats playerStats;
     CharacterController controller;
     public Slider healthBar;
     public Image damagedImage;
@@ -23,10 +23,8 @@ public class playerDeath : MonoBehaviour {
         anim = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
         playerMovement = GetComponent<PlayerMov>();
-        if (GetComponent<KnightClass>())
-        {
-            playerStats = new KnightClass();
-        }
+        playerStats = GetComponent<PlayerStats>();
+        playerStats.CurrentHealth = playerStats.MaxHealth;
 
         
 
@@ -36,6 +34,7 @@ public class playerDeath : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         healthBar.value = playerStats.CurrentHealth;
+        
 	}
 
    

@@ -7,7 +7,7 @@ public class EnemyCombat : MonoBehaviour {
     public int currentHealth;
     public int enemyDamage = 10;
     CharacterController controller;
-    playerDeath playerHealth;
+   
 
     // Use this for initialization
     void Start()

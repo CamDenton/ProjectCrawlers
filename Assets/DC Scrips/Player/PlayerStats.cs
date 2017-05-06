@@ -1,11 +1,34 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KnightClass : playerInfo {
+public class PlayerStats : MonoBehaviour {
 
- public KnightClass() : base (string.Empty, "Knight", 100, 100, 0, 100, 100, 10, 10)
+    public Classes playerClassType;
+    public string playerName = string.Empty;
+    public string playerClass = string.Empty;
+    protected int playerCurrentHealth;
+    protected int playerMaxHealth = 0;
+    protected int playerArmor = 0;
+    protected int playerCurrentStamina = 0;
+    protected int playerMaxStamina = 0;
+    protected int playerCurrentMana = 0;
+    protected int playerMaxMana = 0;
+
+
+
+    void Start()
+    {
+        playerCurrentHealth = playerMaxHealth;
+        playerMaxHealth = playerClassType.MaxHealth;
+        playerArmor = playerClassType.Armor;
+        playerCurrentStamina = playerMaxStamina;
+        playerMaxStamina = playerClassType.MaxStamina;
+        playerCurrentMana = playerMaxMana;
+        playerMaxMana = playerClassType.MaxMana;
+    }
+
+    private void Update()
     {
 
     }
@@ -18,9 +41,11 @@ public class KnightClass : playerInfo {
 
     public string ClassName
     {
-        get { return playerClass; }
-        
+        get { return playerClassType.ClassName; }
+
     }
+
+
 
     public int CurrentHealth
     {
@@ -63,12 +88,21 @@ public class KnightClass : playerInfo {
         get { return playerMaxMana; }
         set { playerMaxMana = value; }
     }
-
-
-
-    
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

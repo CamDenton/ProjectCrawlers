@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class PlayerAttack : MonoBehaviour {
     public int AttackInt = 30;
     Animator anim;
-   public bool isAttacking = false;
+   public bool hasHit = false;
 
 
 	// Use this for initialization
@@ -18,30 +18,30 @@ public class PlayerAttack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(isAttacking);
-        if (Input.GetButtonDown("Fire1") && !isAttacking)
-        {
-            StartCoroutine(Attack());
-        }
+        Debug.Log(hasHit);
         
 	}
 
  IEnumerator Attack()
     {
-        isAttacking = true;
-        yield return new WaitForSeconds(1);
-        isAttacking = false;
+        
+        yield return new WaitForSeconds(2);
+        hasHit = false;
 
     }
 
     void OnTriggerEnter(Collider coll)
     {
         
-        if (coll.gameObject.tag == "Enemy" && isAttacking)
+        if (coll.gameObject.tag == "Enemy")
+
+            if(hasHit == false)
         {
             coll.gameObject.BroadcastMessage("Hit", AttackInt, SendMessageOptions.DontRequireReceiver);
-            
-        }
+                hasHit = true;
+                StartCoroutine(Attack());
+
+            }
 
     }
 

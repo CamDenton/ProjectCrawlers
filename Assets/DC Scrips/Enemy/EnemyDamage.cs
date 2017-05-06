@@ -1,22 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyDamage : MonoBehaviour {
 
     public int maxHealth = 60;
     public int currentHealth;
     Rigidbody parentBody;
+    public Slider healthBar;
+    
     // Use this for initialization
     void Start () {
         currentHealth = maxHealth;
         parentBody = GetComponentInParent<Rigidbody>();
+
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        
+    }
 
     public void Hit(int damage)
     {

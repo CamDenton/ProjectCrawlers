@@ -96,17 +96,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Classes\Classes.cs" />
     <Compile Include="Assets\DC Scrips\Enemy\EnemyCombat.cs" />
     <Compile Include="Assets\DC Scrips\Enemy\EnemyDamage.cs" />
     <Compile Include="Assets\DC Scrips\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\DC Scrips\Enemy\EnemySpawner.cs" />
-    <Compile Include="Assets\DC Scrips\Player\KnightClass.cs" />
     <Compile Include="Assets\DC Scrips\Player\PlayerAttack.cs" />
-    <Compile Include="Assets\DC Scrips\Player\PlayerInfo.cs" />
+    <Compile Include="Assets\DC Scrips\Player\PlayerCombat.cs" />
     <Compile Include="Assets\DC Scrips\Player\PlayerMov.cs" />
+    <Compile Include="Assets\DC Scrips\Player\PlayerStats.cs" />
     <Compile Include="Assets\DC Scrips\Player\PointClickMovement.cs" />
     <Compile Include="Assets\DC Scrips\Player\SwordCollectible.cs" />
-    <Compile Include="Assets\DC Scrips\Player\playerDeath.cs" />
     <Compile Include="Assets\DC Scrips\World\Inventory\ItemScript.cs" />
     <Compile Include="Assets\DC Scrips\World\Quit.cs" />
     <Compile Include="Assets\Items\Inventory\WeaponSlot.cs" />
