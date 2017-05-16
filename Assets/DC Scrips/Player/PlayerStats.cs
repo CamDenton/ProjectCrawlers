@@ -19,8 +19,8 @@ public class PlayerStats : MonoBehaviour {
 
     void Start()
     {
-        playerCurrentHealth = playerMaxHealth;
         playerMaxHealth = playerClassType.MaxHealth;
+        playerCurrentHealth = playerMaxHealth;
         playerArmor = playerClassType.Armor;
         playerCurrentStamina = playerMaxStamina;
         playerMaxStamina = playerClassType.MaxStamina;

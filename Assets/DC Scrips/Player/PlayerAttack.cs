@@ -8,6 +8,7 @@ public class PlayerAttack : MonoBehaviour {
     public int AttackInt = 30;
     Animator anim;
    public bool hasHit = false;
+    public string attackButton = "FireP1";
 
 
 	// Use this for initialization
@@ -19,6 +20,7 @@ public class PlayerAttack : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Debug.Log(hasHit);
+
         
 	}
 
@@ -33,12 +35,12 @@ public class PlayerAttack : MonoBehaviour {
     void OnTriggerEnter(Collider coll)
     {
         
-        if (coll.gameObject.tag == "Enemy")
+        if (coll.gameObject.tag == "Enemy" && Input.GetButtonDown(attackButton))
 
             if(hasHit == false)
         {
-            coll.gameObject.BroadcastMessage("Hit", AttackInt, SendMessageOptions.DontRequireReceiver);
                 hasHit = true;
+                coll.gameObject.BroadcastMessage("Hit", AttackInt, SendMessageOptions.DontRequireReceiver);
                 StartCoroutine(Attack());
 
             }

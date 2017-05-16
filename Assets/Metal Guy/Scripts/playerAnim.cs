@@ -8,6 +8,7 @@ public class playerAnim : MonoBehaviour {
     public string vertical = "VerticalP1";
     public string sprint = "SprintP1";
     PlayerAttack attack;
+    public string attackButton = "FireP1";
     // Use this for initialization
     void Start () {
         anim = gameObject.GetComponent<Animator>();
@@ -69,12 +70,12 @@ public class playerAnim : MonoBehaviour {
             anim.SetBool("Sprinting", false);
         }
 
-        if (Input.GetButtonDown("Fire1") && !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        if (Input.GetButtonDown(attackButton) && !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
             anim.SetBool("Main Attack", true);
         }
 
-        if(!Input.GetButtonDown("Fire1"))
+        if(!Input.GetButtonDown(attackButton))
         {
             anim.SetBool("Main Attack", false);
         }
