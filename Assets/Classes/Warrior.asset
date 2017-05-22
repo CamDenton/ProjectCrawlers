@@ -17,6 +17,8 @@ MonoBehaviour:
   maxHealth: 100
   armor: 5
   currentStamina: 0
-  maxStamina: 100
+  maxStamina: 200
   currentMana: 0
   maxMana: 20
+  attack: 30
+  intelligence: 10

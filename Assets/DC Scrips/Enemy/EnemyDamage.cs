@@ -19,13 +19,14 @@ public class EnemyDamage : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+        Debug.Log(currentHealth);
     }
 
     public void Hit(int damage)
     {
         currentHealth = currentHealth - damage;
         parentBody.AddForce(Vector3.back);
+        Debug.Log("Enemy hit");
 
         if (currentHealth <= 0)
         {

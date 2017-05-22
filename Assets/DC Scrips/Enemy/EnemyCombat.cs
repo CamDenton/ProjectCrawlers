@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyCombat : MonoBehaviour {
-    public int maxHealth = 60;
-    public int currentHealth;
+    
+    
     public int enemyDamage = 10;
     CharacterController controller;
    
@@ -12,7 +12,7 @@ public class EnemyCombat : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        currentHealth = maxHealth;
+        
         controller = GetComponent<CharacterController>();
 
     }
@@ -21,7 +21,7 @@ public class EnemyCombat : MonoBehaviour {
     void Update()
     {
 
-        Debug.Log(currentHealth);
+        
 
     }
 

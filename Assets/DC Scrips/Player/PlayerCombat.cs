@@ -25,6 +25,7 @@ public class PlayerCombat : MonoBehaviour {
         playerMovement = GetComponent<PlayerMov>();
         playerStats = GetComponent<PlayerStats>();
         playerStats.CurrentHealth = playerStats.MaxHealth;
+        
 
         
 
@@ -34,6 +35,7 @@ public class PlayerCombat : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         healthBar.value = playerStats.CurrentHealth;
+       
         
 	}
 

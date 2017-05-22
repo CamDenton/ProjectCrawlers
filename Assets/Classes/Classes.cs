@@ -13,6 +13,8 @@ public class Classes : ScriptableObject {
     public int maxStamina = 0;
     public int currentMana = 0;
     public int maxMana = 0;
+    public int attack = 0;
+    public int intelligence = 0; 
 
 
     public string PlayerName
@@ -67,6 +69,18 @@ public class Classes : ScriptableObject {
     {
         get { return maxMana; }
         set { maxMana = value; }
+    }
+
+    public int Attack
+    {
+        get { return attack; }
+        set { attack = value; }
+    }
+
+    public int Intelligence
+    {
+        get { return intelligence; }
+        set { intelligence = value; }
     }
 
 

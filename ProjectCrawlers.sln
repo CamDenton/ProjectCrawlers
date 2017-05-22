@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectCrawlers", "ProjectCrawlers.csproj", "{914A9614-0388-A568-410F-A41C2F53F040}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectCrawlers.Editor", "ProjectCrawlers.Editor.csproj", "{BD37EDC9-3022-F282-93A2-143C7920EF81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{914A9614-0388-A568-410F-A41C2F53F040}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{914A9614-0388-A568-410F-A41C2F53F040}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{914A9614-0388-A568-410F-A41C2F53F040}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{914A9614-0388-A568-410F-A41C2F53F040}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD37EDC9-3022-F282-93A2-143C7920EF81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD37EDC9-3022-F282-93A2-143C7920EF81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD37EDC9-3022-F282-93A2-143C7920EF81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD37EDC9-3022-F282-93A2-143C7920EF81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
