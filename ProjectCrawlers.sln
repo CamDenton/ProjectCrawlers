@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectCrawlers", "ProjectCrawlers.csproj", "{914A9614-0388-A568-410F-A41C2F53F040}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectCrawlers.Editor", "ProjectCrawlers.Editor.csproj", "{BD37EDC9-3022-F282-93A2-143C7920EF81}"

@@ -7,6 +7,8 @@ public class cameraControl : MonoBehaviour {
     Vector2 smoothingv;
     public float sensitivity = 20f;
     public float smoothing = 3f;
+    public string playerCamX = "Mouse XP1";
+    public string playerCamY = "Mouse YP1";
 
     GameObject player;
 
@@ -24,9 +26,10 @@ public class cameraControl : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+
         
-            var mousePos = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
-            mousePos = Vector2.Scale(mousePos, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
+        var mousePos = new Vector2(Input.GetAxisRaw(playerCamX), Input.GetAxisRaw(playerCamY));
+        mousePos = Vector2.Scale(mousePos, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
             smoothingv.x = Mathf.Lerp(smoothingv.x, mousePos.x, 1f / smoothing);
             smoothingv.y = Mathf.Lerp(smoothingv.y, mousePos.y, 1f / smoothing);
             mouse += smoothingv;
