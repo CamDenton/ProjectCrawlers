@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4210760314147150}
   m_Layer: 0
   m_Name: p2Spawner
-  m_TagString: Untagged
+  m_TagString: Spawns
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -27,6 +27,8 @@ public class ButtonHandler : MonoBehaviour {
     {
         playerOneSpawn = playerOne.position;
         playerTwoSpawn = playerTwo.position;
+        playerThreeSpawn = playerThree.position;
+        playerFourSpawn = playerFour.position;
     }
 
     public void PlayerOneSelected()
