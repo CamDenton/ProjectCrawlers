@@ -18,7 +18,8 @@ public class WinCondition : MonoBehaviour {
         if (destroyedAll.isComplete == true || destroyedAll == null)
         {
             isComplete = true;
-            Debug.Log(isComplete);
+            Debug.Log(isComplete + " - Objective Complete");
+            Application.Quit();
         }
     }
 

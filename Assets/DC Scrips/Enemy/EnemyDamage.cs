@@ -9,11 +9,13 @@ public class EnemyDamage : MonoBehaviour {
     public int currentHealth;
     Rigidbody parentBody;
     public Slider healthBar;
+    GameObject thisEnemy;
     
     // Use this for initialization
     void Start () {
         currentHealth = maxHealth;
         parentBody = GetComponentInParent<Rigidbody>();
+        thisEnemy = gameObject; 
 
     }
 	
@@ -31,6 +33,7 @@ public class EnemyDamage : MonoBehaviour {
         if (currentHealth <= 0)
         {
             Destroy(transform.parent.gameObject);
+            SendMessageUpwards("RemoveSpawn", thisEnemy);
         }
     }
 }

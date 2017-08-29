@@ -14,7 +14,9 @@ public class WCSpawns : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(listOfSpawns.Count == 0)
+        listOfSpawns = new List<GameObject>(GameObject.FindGameObjectsWithTag("Spawns"));
+        Debug.Log(listOfSpawns.Count + " This is the WC list"); 
+        if (listOfSpawns.Count == 0)
         {
             isComplete = true; 
         }

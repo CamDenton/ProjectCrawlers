@@ -129,6 +129,8 @@
     <Compile Include="Assets\DC Scrips\World\Conditions\WCSpawns.cs" />
     <Compile Include="Assets\DC Scrips\World\Conditions\WinCondition.cs" />
     <Compile Include="Assets\DC Scrips\World\Inventory\ItemScript.cs" />
+    <Compile Include="Assets\DC Scrips\World\MainMenuButtons.cs" />
+    <Compile Include="Assets\DC Scrips\World\ObjectiveTester.cs" />
     <Compile Include="Assets\DC Scrips\World\Quit.cs" />
     <Compile Include="Assets\GameSparks\GameSparksRTUnity.cs" />
     <Compile Include="Assets\GameSparks\GameSparksSettings.cs" />

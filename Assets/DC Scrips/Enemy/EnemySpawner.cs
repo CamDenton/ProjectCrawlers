@@ -6,18 +6,26 @@ public class EnemySpawner : MonoBehaviour {
    public GameObject enemyObject;
     Vector3 parentPosition;
     public int maxSpawn = 0;
+    List<GameObject> aliveEnemies;
+    List<GameObject> deadEnemies;
+    bool encountered = false;
     
 
 	// Use this for initialization
 	void Start () {
         parentPosition = gameObject.transform.position;
-        
-        
-	}
+        aliveEnemies = new List<GameObject>();
+        deadEnemies = new List<GameObject>();
+
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (deadEnemies.Count == maxSpawn && encountered == true)
+        {
+            Destroy(gameObject);
+        }
 	}
 
     private void OnTriggerEnter(Collider other)
@@ -35,7 +43,7 @@ public class EnemySpawner : MonoBehaviour {
         {
             if (maxSpawn <= i)
             {
-                Instantiate(enemyObject, parentPosition, Quaternion.identity);
+                aliveEnemies.Add( Instantiate(enemyObject, parentPosition, Quaternion.identity));
                 maxSpawn++;
                 yield return new WaitForSeconds(2);
             }
@@ -46,6 +54,13 @@ public class EnemySpawner : MonoBehaviour {
             }
         }
 
-        Destroy(gameObject);
+        encountered = true;
+        
+    }
+
+    public void RemoveSpawn(GameObject spawn)
+    {
+        deadEnemies.Add(spawn);
+        Debug.Log("Added");
     }
 }
