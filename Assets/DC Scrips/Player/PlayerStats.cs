@@ -14,6 +14,7 @@ public class PlayerStats : MonoBehaviour {
     protected int playerMaxStamina = 0;
     protected int playerCurrentMana = 0;
     protected int playerMaxMana = 0;
+    protected int playerIntelligence = 0; 
 
 
 
@@ -26,6 +27,7 @@ public class PlayerStats : MonoBehaviour {
         playerMaxStamina = playerClassType.MaxStamina;
         playerCurrentMana = playerMaxMana;
         playerMaxMana = playerClassType.MaxMana;
+        playerIntelligence = playerClassType.Intelligence;
     }
 
     private void Update()
@@ -87,6 +89,12 @@ public class PlayerStats : MonoBehaviour {
     {
         get { return playerMaxMana; }
         set { playerMaxMana = value; }
+    }
+
+    public int Intelligence
+    {
+        get { return playerIntelligence; }
+        set { playerIntelligence = value; }
     }
 }
 

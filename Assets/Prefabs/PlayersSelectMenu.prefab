@@ -240,8 +240,8 @@ Camera:
   m_GameObject: {fileID: 1490399390752024}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.4044118, g: 0.31101975, b: 0.110023804, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -256,7 +256,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294963199
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -533,15 +533,15 @@ MonoBehaviour:
     type: 2}
   playerOneCornerObj: {fileID: 1117306435378380, guid: 1f24f6bdcd95a7c49a8fbdd53233c1d3,
     type: 2}
-  playerTwoObj: {fileID: 1443886602506878, guid: b1476f092d58c2b41b552ddb9fd7a743,
+  playerTwoObj: {fileID: 1995390857110362, guid: b44d3d2a1a4e5ec47bccff48c6cdcdf0,
     type: 2}
-  playerTwoCornerObj: {fileID: 1274405034414412, guid: e00ee220f303a9045979d71f8da77fec,
+  playerTwoCornerObj: {fileID: 1315949880630520, guid: 2e3511c20ac5c574e8f350f09edb0aea,
     type: 2}
   playerThreeObj: {fileID: 1294186020812500, guid: 734f4bbbcdbe0ac449c69e857374ccf5,
     type: 2}
   playerThreeCornerObj: {fileID: 1102220533727768, guid: 4c6b65b629341604d88f1a81cf4b79d8,
     type: 2}
-  playerFourObj: {fileID: 1329729869673374, guid: 2da1ad2c2ddb1f54d8f781a9dd558f29,
+  playerFourObj: {fileID: 1819019388406114, guid: cfe3d9ab834372a41ab70c62f0bd0fc7,
     type: 2}
   singlePlayerObj: {fileID: 1311223240258138, guid: a73bfa0e1cefc0548b92bc3e7080a894,
     type: 2}

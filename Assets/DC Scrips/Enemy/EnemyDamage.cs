@@ -27,7 +27,7 @@ public class EnemyDamage : MonoBehaviour {
     public void Hit(int damage)
     {
         currentHealth = currentHealth - damage;
-        parentBody.AddForce(Vector3.back);
+        parentBody.AddRelativeForce(Vector3.back);
         Debug.Log("Enemy hit");
 
         if (currentHealth <= 0)

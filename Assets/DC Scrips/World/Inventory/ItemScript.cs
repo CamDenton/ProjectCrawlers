@@ -7,6 +7,8 @@ public class ItemScript : ScriptableObject {
 
     public Sprite spriteImage;
     public GameObject item;
+    public int attack;
+    public int intelligence; 
     public string ItemType = string.Empty;
 	
 }

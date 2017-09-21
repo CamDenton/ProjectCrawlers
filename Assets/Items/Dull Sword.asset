@@ -13,4 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteImage: {fileID: 21300000, guid: 0c4edcad18c1f224e8dce1433c3726f1, type: 3}
   item: {fileID: 100002, guid: cb9e3ef49df906040a6f0f19b9d8dc80, type: 3}
+  attack: 5
+  intelligence: 0
   ItemType: Weapon

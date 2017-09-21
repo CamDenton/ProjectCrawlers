@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SwordCollectible : MonoBehaviour {
-    public string weaponName = "Dull Longsword";
-    public int attackModifier = 10;
-    public WeaponSlot weapon;
+    public string weaponName;
+    public int attackModifier;
     public ItemScript item;
    
 	// Use this for initialization
 	void Start () {
-        weapon = GameObject.Find("Weapon Slot").GetComponent<WeaponSlot>();
-        
+
+        attackModifier = item.attack;
         
 	}
 	
@@ -24,10 +23,19 @@ public class SwordCollectible : MonoBehaviour {
     {
         if(other.gameObject.tag == "Player")
         {
-            weapon.addWeapon(item);
-            other.gameObject.BroadcastMessage("ChangeAttack", attackModifier);
+            PlayerStats otherStats = other.GetComponent<PlayerStats>();
+            if (otherStats.playerClassType.ToString() == "Warrior (Classes)")
+            {
+                other.gameObject.GetComponentInChildren<WeaponSlot>().item = item;
+                other.gameObject.GetComponentInChildren<WeaponSlot>().itemImage.sprite = item.spriteImage;
+                other.gameObject.BroadcastMessage("ChangeAttack", attackModifier);
+                Destroy(gameObject);
+            }
 
-            Destroy(gameObject);
+            else
+            {
+
+            }
 
         }
 

@@ -35,6 +35,7 @@ public class PlayerCombat : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         healthBar.value = playerStats.CurrentHealth;
+        Debug.Log(playerStats.playerClassType + " This is the players class");
        
         
 	}

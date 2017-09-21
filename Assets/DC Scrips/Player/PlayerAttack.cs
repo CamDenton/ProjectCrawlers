@@ -12,6 +12,7 @@ public class PlayerAttack : MonoBehaviour {
     public PlayerStats stats;
 
 
+
 	// Use this for initialization
 	void Start () {
         anim = gameObject.GetComponentInParent<Animator>();
@@ -24,14 +25,10 @@ public class PlayerAttack : MonoBehaviour {
 	void Update () {
         Debug.Log(hasHit);
         Debug.Log(AttackInt);
-
-        
-	}
-
-    private void FixedUpdate()
-    {
         AttackInt = stats.playerClassType.Attack;
+
     }
+
 
     public void Hit()
     {

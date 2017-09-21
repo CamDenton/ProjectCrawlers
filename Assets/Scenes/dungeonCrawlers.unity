@@ -142,7 +142,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Dull Longsword
   attackModifier: 10
-  weapon: {fileID: 0}
   item: {fileID: 11400000, guid: 5f6b58f30d92107428b28147e1c057a9, type: 2}
 --- !u!4 &66620395 stripped
 Transform:
@@ -1769,6 +1768,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1800604782869670, guid: 63fb44c13469fbe4ebee1c1300fa54e9, type: 2}
+      propertyPath: m_Name
+      value: playersCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 114599235632049600, guid: 63fb44c13469fbe4ebee1c1300fa54e9,
         type: 2}
       propertyPath: playerOne
@@ -1789,35 +1792,6 @@ Prefab:
       propertyPath: playerFour
       value: 
       objectReference: {fileID: 625403800}
-    - target: {fileID: 1800604782869670, guid: 63fb44c13469fbe4ebee1c1300fa54e9, type: 2}
-      propertyPath: m_Name
-      value: playersCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 20482296429363864, guid: 63fb44c13469fbe4ebee1c1300fa54e9,
-        type: 2}
-      propertyPath: m_ClearFlags
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 20482296429363864, guid: 63fb44c13469fbe4ebee1c1300fa54e9,
-        type: 2}
-      propertyPath: m_CullingMask.m_Bits
-      value: 4294963199
-      objectReference: {fileID: 0}
-    - target: {fileID: 20482296429363864, guid: 63fb44c13469fbe4ebee1c1300fa54e9,
-        type: 2}
-      propertyPath: m_BackGroundColor.r
-      value: 0.4044118
-      objectReference: {fileID: 0}
-    - target: {fileID: 20482296429363864, guid: 63fb44c13469fbe4ebee1c1300fa54e9,
-        type: 2}
-      propertyPath: m_BackGroundColor.g
-      value: 0.31101975
-      objectReference: {fileID: 0}
-    - target: {fileID: 20482296429363864, guid: 63fb44c13469fbe4ebee1c1300fa54e9,
-        type: 2}
-      propertyPath: m_BackGroundColor.b
-      value: 0.110023804
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 63fb44c13469fbe4ebee1c1300fa54e9, type: 2}
   m_IsPrefabParent: 0
@@ -1834,7 +1808,7 @@ GameObject:
   - component: {fileID: 1495926139}
   - component: {fileID: 1495926141}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1896,7 +1870,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1495926136}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ea43810eadfae34eb898046602920b2, type: 3}
   m_Name: 
