@@ -15,7 +15,7 @@ public class EnemyMovement : MonoBehaviour {
    
 	// Use this for initialization
 	void Start () {
-        player = GameObject.FindGameObjectWithTag("Player");
+        
         agent = GetComponentInParent<NavMeshAgent>();
         
         
@@ -46,6 +46,7 @@ public class EnemyMovement : MonoBehaviour {
         if (coll.gameObject.tag == "Player")
         {
             playerDetected = true;
+            player = coll.gameObject;
         }
     }
 

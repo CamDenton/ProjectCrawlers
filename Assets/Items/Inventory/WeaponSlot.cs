@@ -9,7 +9,7 @@ public class WeaponSlot : MonoBehaviour {
 
     private void Update()
     {
-        itemImage.sprite = item.spriteImage;
+        
     }
 
     public void addWeapon(ItemScript addedItem)

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour {
    public GameObject enemyObject;
+    GameObject instanceObj;
     Vector3 parentPosition;
     public int maxSpawn = 0;
     List<GameObject> aliveEnemies;
-    List<GameObject> deadEnemies;
+    int deadEnemies;
     bool encountered = false;
     
 
@@ -15,14 +16,14 @@ public class EnemySpawner : MonoBehaviour {
 	void Start () {
         parentPosition = gameObject.transform.position;
         aliveEnemies = new List<GameObject>();
-        deadEnemies = new List<GameObject>();
+        
 
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (deadEnemies.Count == maxSpawn && encountered == true)
+        if (deadEnemies == maxSpawn && encountered == true)
         {
             Destroy(gameObject);
         }
@@ -43,7 +44,8 @@ public class EnemySpawner : MonoBehaviour {
         {
             if (maxSpawn <= i)
             {
-                aliveEnemies.Add( Instantiate(enemyObject, parentPosition, Quaternion.identity));
+                aliveEnemies.Add( instanceObj = Instantiate(enemyObject, parentPosition, Quaternion.identity));
+                instanceObj.transform.SetParent(this.transform);
                 maxSpawn++;
                 yield return new WaitForSeconds(2);
             }
@@ -58,9 +60,9 @@ public class EnemySpawner : MonoBehaviour {
         
     }
 
-    public void RemoveSpawn(GameObject spawn)
+    public void RemoveSpawn()
     {
-        deadEnemies.Add(spawn);
-        Debug.Log("Added");
+        deadEnemies++;
+        Debug.Log("Dead Enemies Count " + deadEnemies);
     }
 }

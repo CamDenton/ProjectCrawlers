@@ -25,7 +25,7 @@ public class ProjectileCollision : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         projectileBody.AddRelativeForce(Vector3.forward * velocity);
-        damage = stats.Intelligence;
+        damage = stats.CurrentIntelligence;
         Debug.Log(damage + "The Spell's Damage");
     }
 

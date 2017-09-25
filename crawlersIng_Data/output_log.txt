@@ -1,0 +1,49 @@
+Initialize engine version: 5.6.2f1 (a2913c821e27)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon(TM) HD 8510G (ID=0x9999)
+    Vendor:   ATI
+    VRAM:     750 MB
+    Driver:   15.201.1101.0
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\BouncyCastle_GameSparks.dll (this message is harmless)
+Loading C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\BouncyCastle_GameSparks.dll into Unity Child Domain
+Platform assembly: C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\GameSparks.Api.dll (this message is harmless)
+Loading C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\GameSparks.Api.dll into Unity Child Domain
+Platform assembly: C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\GameSparks.dll (this message is harmless)
+Loading C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\GameSparks.dll into Unity Child Domain
+Platform assembly: C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\GameSparksRT.dll (this message is harmless)
+Loading C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\GameSparksRT.dll into Unity Child Domain
+Platform assembly: C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\ProBuilderCore-Unity5.dll (this message is harmless)
+Loading C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\ProBuilderCore-Unity5.dll into Unity Child Domain
+Platform assembly: C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\ProBuilderMeshOps-Unity5.dll (this message is harmless)
+Loading C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\ProBuilderMeshOps-Unity5.dll into Unity Child Domain
+Platform assembly: C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\KDTree.dll (this message is harmless)
+Loading C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\KDTree.dll into Unity Child Domain
+Platform assembly: C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\pb_Stl.dll (this message is harmless)
+Loading C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\pb_Stl.dll into Unity Child Domain
+Platform assembly: C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\Triangle.dll (this message is harmless)
+Loading C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\Triangle.dll into Unity Child Domain
+- Completed reload, in  0.075 seconds
+Platform assembly: C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\cdent\Documents\Unity Projects\ProjectCrawlers\crawlersIng_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 3.291371 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 54fc -> priority: 1 
+  Thread -> id: 3e58 -> priority: 1 

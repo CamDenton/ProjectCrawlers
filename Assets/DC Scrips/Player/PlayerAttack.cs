@@ -10,6 +10,7 @@ public class PlayerAttack : MonoBehaviour {
    public bool hasHit = false;
     public string attackButton = "FireP1";
     public PlayerStats stats;
+    
 
 
 
@@ -25,7 +26,7 @@ public class PlayerAttack : MonoBehaviour {
 	void Update () {
         Debug.Log(hasHit);
         Debug.Log(AttackInt);
-        AttackInt = stats.playerClassType.Attack;
+        AttackInt = stats.CurrentAttack;
 
     }
 
@@ -60,10 +61,6 @@ public class PlayerAttack : MonoBehaviour {
 
     }
 
-    void ChangeAttack(int modifier)
-    {
-        AttackInt += modifier;
-    }
 }
 
 

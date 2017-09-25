@@ -21,4 +21,4 @@ MonoBehaviour:
   currentMana: 0
   maxMana: 100
   attack: 10
-  intelligence: 30
+  intelligence: 20

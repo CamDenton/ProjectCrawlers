@@ -14,7 +14,12 @@ public class PlayerStats : MonoBehaviour {
     protected int playerMaxStamina = 0;
     protected int playerCurrentMana = 0;
     protected int playerMaxMana = 0;
-    protected int playerIntelligence = 0; 
+    protected int playerBaseIntelligence = 0;
+    protected int playerCurrentIntelligence = 0;
+    protected int playerBaseAttack = 0;
+    protected int playerCurrentAttack = 0;
+    public int weapAtt;
+    public int weapIntt;
 
 
 
@@ -27,12 +32,17 @@ public class PlayerStats : MonoBehaviour {
         playerMaxStamina = playerClassType.MaxStamina;
         playerCurrentMana = playerMaxMana;
         playerMaxMana = playerClassType.MaxMana;
-        playerIntelligence = playerClassType.Intelligence;
+        playerBaseIntelligence = playerClassType.Intelligence;
+        playerCurrentIntelligence = playerBaseIntelligence + weapIntt;
+        playerBaseAttack = playerClassType.Attack;
+        playerCurrentAttack = playerBaseAttack + weapAtt;
+
     }
 
     private void Update()
     {
-
+        playerCurrentIntelligence = playerBaseIntelligence + weapIntt;
+        playerCurrentAttack = playerBaseAttack + weapAtt;
     }
 
     public string PlayerName
@@ -64,7 +74,7 @@ public class PlayerStats : MonoBehaviour {
     public int Armor
     {
         get { return playerArmor; }
-        set { playerArmor = 0; }
+        set { playerArmor = value; }
     }
 
     public int CurrentStamina
@@ -91,11 +101,40 @@ public class PlayerStats : MonoBehaviour {
         set { playerMaxMana = value; }
     }
 
-    public int Intelligence
+    public int BaseIntelligence
     {
-        get { return playerIntelligence; }
-        set { playerIntelligence = value; }
+        get { return playerBaseIntelligence; }
+        set { playerBaseIntelligence = value; }
     }
+
+    public int CurrentIntelligence
+    {
+        get { return playerCurrentIntelligence; }
+        set { playerCurrentIntelligence = value; }
+    }
+
+    public int BaseAttack
+    {
+        get { return playerBaseAttack; }
+        set { playerBaseAttack = value; }
+    }
+
+    public int CurrentAttack
+    {
+        get { return playerCurrentAttack;  }
+        set { playerCurrentAttack = value; }
+    }
+
+    void ChangeAttack(int modifier)
+    {
+        weapAtt = modifier;
+    }
+
+    void ChangeIntelligence(int modifier)
+    {
+        weapIntt = modifier;
+    }
+
 }
 
 

@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerCombat : MonoBehaviour {
-    
-    
+
+    playerAnim pAnims;
     Animator anim;
     PlayerMov playerMovement;
     PlayerStats playerStats;
@@ -25,7 +25,7 @@ public class PlayerCombat : MonoBehaviour {
         playerMovement = GetComponent<PlayerMov>();
         playerStats = GetComponent<PlayerStats>();
         playerStats.CurrentHealth = playerStats.MaxHealth;
-        
+        pAnims = GetComponent<playerAnim>();
 
         
 
@@ -49,7 +49,7 @@ public class PlayerCombat : MonoBehaviour {
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
         {
             anim.Play("Hit");
-            controller.Move(controller.transform.forward * -5);
+            controller.Move(controller.transform.forward * -10);
 
         }
 
@@ -72,7 +72,9 @@ public class PlayerCombat : MonoBehaviour {
     void Death()
     {
         playerMovement.enabled = false;
+        anim.SetBool("Dead", true);
         anim.Play("Death");
-        Application.Quit();
+        pAnims.enabled = false;
+        
     }
 }

@@ -28,7 +28,7 @@ public class SwordCollectible : MonoBehaviour {
             {
                 other.gameObject.GetComponentInChildren<WeaponSlot>().item = item;
                 other.gameObject.GetComponentInChildren<WeaponSlot>().itemImage.sprite = item.spriteImage;
-                other.gameObject.BroadcastMessage("ChangeAttack", attackModifier);
+                other.gameObject.BroadcastMessage("ChangeAttack", attackModifier, SendMessageOptions.DontRequireReceiver);
                 Destroy(gameObject);
             }
 

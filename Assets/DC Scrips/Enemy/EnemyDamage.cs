@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class EnemyDamage : MonoBehaviour {
 
@@ -10,12 +11,14 @@ public class EnemyDamage : MonoBehaviour {
     Rigidbody parentBody;
     public Slider healthBar;
     GameObject thisEnemy;
+    NavMeshAgent agent; 
     
     // Use this for initialization
     void Start () {
         currentHealth = maxHealth;
         parentBody = GetComponentInParent<Rigidbody>();
-        thisEnemy = gameObject; 
+        thisEnemy = gameObject;
+        agent = GetComponentInParent<NavMeshAgent>();
 
     }
 	
@@ -27,13 +30,15 @@ public class EnemyDamage : MonoBehaviour {
     public void Hit(int damage)
     {
         currentHealth = currentHealth - damage;
-        parentBody.AddRelativeForce(Vector3.back);
+        parentBody.AddRelativeForce(Vector3.back * 10, ForceMode.Force);
+        agent.Move(agent.transform.forward * -3); 
         Debug.Log("Enemy hit");
 
         if (currentHealth <= 0)
         {
+            SendMessageUpwards("RemoveSpawn", SendMessageOptions.DontRequireReceiver);
             Destroy(transform.parent.gameObject);
-            SendMessageUpwards("RemoveSpawn", thisEnemy);
+            
         }
     }
 }
